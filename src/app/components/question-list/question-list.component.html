@@ -12,7 +12,7 @@
           </div>
           <div class="col-lg-12 card p-4">
              <form class="row">
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                    <label class="form-label">Select Category</label>
                    <select class="form-select">
                       <option >Please Select Category</option>
@@ -26,10 +26,10 @@
                    <div class="text-center">
                       <a href="javascript:void(0);" class="btn bg-blue mt-2">Total Question 1000</a>
                    </div>
-                </div>
+                </div> -->
                 <div class="col-lg-4">
                    <label class="form-label">Select Subject</label>
-                   <select class="form-select" [ngModel]="question" [ngModelOptions]="{standalone: true}">
+                   <select class="form-select" [(ngModel)]="question" [ngModelOptions]="{standalone: true}">
                        <option value=''>Select Subject</option>
                       <option [value]="sub.sub_id" *ngFor="let sub of subjectList" >{{sub?.sub_name}}</option>
                      </select>
@@ -37,7 +37,7 @@
                       <a href="javascript:void(0);" class="btn bg-blue mt-2">Total Subject 1000</a>
                    </div>
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                    <label class="form-label">Select Topic</label>
                    <select class="form-select">
                       <option >Please Select Topic</option>
@@ -51,7 +51,7 @@
                    <div class="text-center">
                       <a href="javascript:void(0);" class="btn bg-blue mt-2">Total Topic 1000</a>
                    </div>
-                </div>
+                </div> -->
                 <div class="col-lg-12 text-center mt-5">
                    <input type="submit" class="btn cst-btn mt-2" (click)="getQuestions(question);" value="Apply">
                    <input type="submit" class="btn cst-btn mt-2" value="Reset">
@@ -82,7 +82,7 @@
                          <td>{{i+1}}</td>
                          <td>{{quest.tlq_question_text_hindi}}</td>
                          <td>{{question}}</td>
-                         
+
                          <td>
                             <a href="javascript:void(0);" class="text-primary fz-16"><i class="fa fa-pencil me-2"></i></a>
                             <a href="javascript:void(0);" class="text-danger fz-16"><i class="fa fa-trash"></i></a>
@@ -92,7 +92,7 @@
                             Active
                          </a>
                       </td>
-                     
+
                    </tbody>
                 </table>
              </div>

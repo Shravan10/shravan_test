@@ -7,7 +7,7 @@ import { FetchQuestionService } from 'src/app/service/fetch-question.service';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
-question:any;
+question:any ='';
 listData:any=[];
   subjectList:{sub_name:string, sub_id:string}[]=[];
   constructor(private service:FetchQuestionService) { }
@@ -19,11 +19,12 @@ listData:any=[];
   }
 
   getQuestions(subId:any) {
+    console.log(subId, this.question)
     this.service.fetchQuestionListData(subId).subscribe((res:any)=> {
       console.log(res)
       this.listData = res.data.data;
       console.log(this.listData)
-      
+
 
     })
   }
